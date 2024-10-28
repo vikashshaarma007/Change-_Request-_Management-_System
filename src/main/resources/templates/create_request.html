@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Change Request</title>
+    <link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+		crossorigin="anonymous">
+</head>
+<body>
+    <h1></h1>
+	<div class="container">
+			<h1 align ="center" class="text-info">Change Request Management System</h1>
+			<hr>
+			<h2>Create Change Request</h2>
+         <form action="#"th:action="@{/changeRequests/create}" th:object="${changeRequest}"th:method="post">
+			<!--<form action="#" th:action="@{/changeRequests/create}" th:object="${changeRequest}"
+			method="POST"> -->
+		<fieldset>
+		<legend>Change Request Details</legend>
+			
+       <div>
+	        <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required th:field="*{title}"  placeholder="title" class="form-control mb-4 col-4">
+       </div> 
+		
+		<div>
+		  <label for="description">Description:</label>
+		  <textarea id="description" name="description" required th:field="*{description}" placeholder="description"></textarea>
+		</div>
+		
+        <div>
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority" 
+			th:field="*{priority}" 
+			class="form-control mb-4 col-4" >
+                <option value="LOW">Low</option>
+                <option value="MEDIUM">Medium</option>
+                <option value="HIGH">High</option>
+            </select>
+        </div>
+		
+        <div>
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" name="dueDate" 
+			 th:field="*{dueDate}" required placeholder="DSueDate" 
+			class="form-control mb-4 col-4">
+        </div>
+        <button type="submit" class="btn btn-info col-2">Submit Request</button>
+		</fieldset>
+    </form>
+    
+	<a th:href = "@{/}">Back to Requests</a>
+</body>
+</html>
