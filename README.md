@@ -1,6 +1,8 @@
 <h1 align="center">Change Request Management System 🧮🚀</h1>
 
-<p align="center"><i>A Spring MVC web application for Change Request Management System with the following CRUD operations </i></p>
+<p align="left"><i>The Change Request Management System is a web-based backend application developed using Java Spring Boot and structured with the Model-View-Controller (MVC) architectural pattern. It is designed to efficiently handle and track change requests (CRs) made within an organization — such as changes to software, infrastructure, or business processes.
+
+This system provides full CRUD functionality for managing change requests, along with user role-based control, status tracking, and optional approval workflows. </i></p>
 <br>
 
 
